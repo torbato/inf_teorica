@@ -44,4 +44,9 @@ int main() {
     // stampare il numero di abitanti della città di Luca
     // Luca vive in una grande città? più di 500000 abitanti?
     printf("Abitanti della città di Luca: %d\n", (*p1.residenza).abitanti);
+
+    if (p1.residenza->abitanti >= 500000)
+        printf("%s vive in una grande città\n", p1.nome);
+    else
+        printf("%s non vive in una grande città\n", p1.nome);
 }
