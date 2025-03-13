@@ -1,3 +1,5 @@
+# write dec_to_bin and implement user-selected mode via input
+
 def get_number():
     number_string = input("Input a binary number: ").strip()
     return number_string
