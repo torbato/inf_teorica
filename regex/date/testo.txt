@@ -1,0 +1,12 @@
+Una data si puo' scrivere 31/03/2022, ma non e' l'unico modo possibile. Per
+esempio, si puo' anche omettere lo zero iniziale, e scrivere 31/3/2022. La
+stessa omissione si puo' fare per il giorno, per cui 3/12/1999 e' lo stesso di
+03/12/1999. Entrambi i formati delle date indicano lo stesso identico giorno,
+il 3 dicembre 1999.
+
+Un esempio di formato che non e' una data e' 2/3, che indica una frazione e non
+una data. Un altro esempio e' 1000/2000/3000, che indica una alternativa e non
+una data. Nemmeno 21 e 4334 da soli indicano una data, nonostante siano una
+sequenza cifre-spazio-lettere-spazio-cifre. In altri casi, sono i valori dei
+numeri a chiarire che non si tratta di una data, come quando si scrive che ci
+sono 2/3/4 cose, oppure 20/30/50.

@@ -1,0 +1,2 @@
+il file elenco.txt contiene un primo esempio mentre testo.txt, fiscali.txt e
+numeri.txt sono altri esempi

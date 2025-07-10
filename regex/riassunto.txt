@@ -1,0 +1,5 @@
+[…] -> scelta fra singoli caratteri
+* + {n,m} -> ripetizioni
+? -> opzionalità
+| -> alternativa
+(…) -> gruppo
