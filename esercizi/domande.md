@@ -137,6 +137,40 @@ ab|abbb+
 
 - disegnare due automi diversi che accettano esattamente le stesse stringhe (ossia ogni stringa accettata dal primo è accettata dal secondo e viceversa)
 
->questi due automi, anche se diversi da un punto di vista costruttivo, accettano le stesse stringhe, ovvero le stringhe composte dall'alfabeto {a,b} che contengono almeno una a
-
+>Questi due automi, anche se diversi da un punto di vista costruttivo, accettano le stesse stringhe, ovvero le stringhe composte dall'alfabeto {a,b} che contengono almeno una a
 ![automi_diversi](./media/automi_diversi_ma_uguali.png)
+
+### Grammatiche
+
+- dire quali stringhe sono generate dalla seguente grammatica (X è il simbolo iniziale, le maiuscole indicano i simboli non terminali)  
+X -> Y  
+X -> Z  
+Y -> X  
+Z -> ab  
+Z -> a  
+
+>La grammatica genera esattamente le due stringhe "a" e "ab".
+
+- dare la definizione di grammatica ambigua; fornire un esempio di grammatica ambigua e una non ambigua
+
+>Una grammatica in cui esistono stringhe che hanno più di un albero di derivazione si dice ambigua. Ad esempio, la formula 2+3*4 senza si può ottenere in due modi diversi:
+![grammatiche_ambigue](./media/grammatiche_ambigue.png)  
+>Nel primo caso il risultato è $(2+3)*4$, mentre nel secondo è $2+(3*4)$, ma chiaramente solo il secondo è corretto (rispetto alla formula originale).
+
+- scrivere la grammatica che genera tutte e sole le stringhe nella forma abbbbba, dove il numero di b è arbitrario
+
+> X -> a Y a  
+Y -> b Y  
+Y -> ε (stringa vuota) 
+
+### Complessità e calcolabilità
+
+- fornire la definizione di insieme contabile; dimostrare che l'insieme dei numeri pari è contabile
+
+>Un insieme è definito numerabile se i suoi elementi sono in numero finito oppure se possono essere messi in corrispondenza biunivoca con i numeri naturali. Per dimostrare che l'insieme dei numeri pari è contabile è necessario individuare una qualsiasi biezione tra $P$ e $\mathbb{N}$, ad esempio l'applicazione $f:\mathbb{N} \to P$ che a ogni elemento $n\in \mathbb{N}$ associa il suo doppio. L'espressione analitica della legge è $f(n) = 2n$, e si vede che $f$ soddisfa la definizione di corrispondenza biunivoca.
+
+- disegnare una macchina di Turing, e spiegare in poche righe come funziona
+
+>Una macchina di Turing è una macchina che può risolvere problemi di decisione (risposta 0/1) su stringhe. È composta da un nastro di lunghezza illimitata, una testina che si muove sul nastro (di una posizione a destra o a sinistra) e che può leggere e sovrascrivere la cella su cui si trova. È definita formalmente da: un alfabeto per i simboli sul nastro, un insieme di stati possibili (ovvero uno stato iniziale e due finali), una funzione di transizione e un output. La funzione di transizione è espressa attraverso un automa contenuto nell'unità di controllo collegata alla testina.
+
+![macchina_di_turing](./media/Turing_machine.png)
