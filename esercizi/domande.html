@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Indirizzi</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h3 id="indirizzi">Indirizzi</h3>
+<ul>
+<li>scrivere le istruzioni C per stampare valore e indirizzo di una variabile</li>
+</ul>
+<pre><code class="language-C"><span class="hljs-type">int</span> a;
+<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%\d&quot;</span>, a);
+<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%\d&quot;</span>, &amp;a);
+</code></pre>
+<ul>
+<li>scrivere le istruzioni C che memorizzano l'indirizzo di una variabile a in una variabile b e che stampano poi il valore di b</li>
+</ul>
+<pre><code class="language-C"><span class="hljs-type">int</span> a;
+<span class="hljs-type">int</span> *b;
+b = &amp;a;
+<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>, *b);
+</code></pre>
+<ul>
+<li>dopo aver eseguito queste istruzioni C, la variabile a ha valore indefinito? e la variabile b?</li>
+</ul>
+<pre><code class="language-C"><span class="hljs-type">int</span> a;
+<span class="hljs-type">int</span> *b;
+b=&amp;a;
+</code></pre>
+<blockquote>
+<p>La variabile a è stata solo inizializzata ma non ha ancora un valore assegnato; b invece ha come valore l'indirizzo in memoria della variabile a.</p>
+</blockquote>
+<h3 id="strutture">Strutture</h3>
+<ul>
+<li>disegnare una rappresentazione grafica di due strutture che puntano entrambe a una terza</li>
+</ul>
+<p><img src="file:///\\wsl.localhost\Ubuntu\home\torbato\Developer\sapienza\inf_teorica\esercizi\media\strutture_che_puntano.png" alt="strutture"></p>
+<ul>
+<li>scrivere la dichiarazione di una struttura &quot;Cane&quot; che contiene nome e razza, scrivere anche la dichiarazione della struttura &quot;Razza&quot;, che contiene nome e vita media in anni</li>
+</ul>
+<pre><code class="language-Java">Class Cane {
+    String nome;
+    String razza;
+}
+
+Class Razza {
+    String nome;
+    <span class="hljs-type">int</span> vita_media;
+}
+</code></pre>
+<ul>
+<li>disegnare una rappresentazione grafica della lista di tre interi 4,12,2 in C</li>
+</ul>
+<p><img src="file:///\\wsl.localhost\Ubuntu\home\torbato\Developer\sapienza\inf_teorica\esercizi\media\lista_interi.png" alt="lista_interi"></p>
+<h3 id="tipi">Tipi</h3>
+<ul>
+<li>mostrare un esempio in cui un programma Java dà errore in compilazione, ma non lo darebbe se Java avesse la tipizzazione ad anatra</li>
+</ul>
+<pre><code class="language-Java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Primo</span> {
+    <span class="hljs-type">int</span> x;
+
+}
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Secondo</span> {
+    <span class="hljs-type">int</span> x;
+}
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> {
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">azzera</span><span class="hljs-params">(Primo a)</span> {
+        a.x = <span class="hljs-number">0</span>;
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
+        <span class="hljs-type">Primo</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Primo</span>();
+        a.x = <span class="hljs-number">12</span>;
+        azzera(a)
+
+        <span class="hljs-type">Secondo</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Secondo</span>();
+        b.x = <span class="hljs-number">12</span>;
+        azzera(b);
+    }
+}
+</code></pre>
+<blockquote>
+<p>In questo caso l'errore è nell'ultima istruzione, perché nonostante il metodo azzera possa azzerare qualunque oggetto con componente x, non accetta l'oggetto b perché non è di tipo Primo.</p>
+</blockquote>
+<ul>
+<li>quali sono i vantaggi e gli svantaggi dei due modi di riconoscere i tipi?</li>
+</ul>
+<blockquote>
+<p>I vantaggi della tipizzazione ad anatra (come in Python) sono una maggiore velocità e facilità di scrittura dei programmi, mentre gli svantaggi includono una maggiore difficoltà di debugging, essendo gli errori rilevati solamente in fase di esecuzione. Per quanto riguarda la tipizzazione dichiarativa, il vantaggio principale è una maggiore sicurezza dal punto di vista delle caratteristiche degli oggetti dichiarati, che può tradursi in maggiore affidabilità dell'applicativo sviluppato; inoltre, gli eventuali errori vengono colti immediatamente in fase di compilazione. Lo svantaggio è una maggiore complessità sintattica e di lettura del codice.</p>
+</blockquote>
+<h3 id="rappresentazione-dei-dati">Rappresentazione dei dati</h3>
+<ul>
+<li>convertire i numeri 10, 3 e 9 in binario; sommare il primo con il secondo, al risultato sottrarre il terzo; queste operazioni vanno effettuate in binario.</li>
+</ul>
+<blockquote>
+<p>10/2 = 5 r 0 -&gt; 5/2 = 2 r 1 -&gt; 2/2 = 1 r 0 -&gt; 1/2 = 0 r 1 -&gt; 10 (b10) = 1010 (b2)<br>
+3/2 = 1 r 1 -&gt; 1/2 = 0 r 1 -&gt; 3 (b10) = 11 (b2)<br>
+9/2 = 4 r 1 -&gt; 4/2 = 2 r 0 -&gt; 2/2 = 1 r 0 -&gt; 1/2 = 0 r 1 -&gt; 9 (b10) = 1001 (b2)<br>
+1010 + 1001 = 1101<br>
+1101 - 1001 = 0100<br>
+0100 (b2) -&gt; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>∗</mo><msup><mn>2</mn><mn>3</mn></msup><mo>+</mo><mn>1</mn><mo>∗</mo><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mn>0</mn><mo>∗</mo><msup><mn>2</mn><mn>1</mn></msup><mo>+</mo><mn>0</mn><mo>∗</mo><msup><mn>2</mn><mn>0</mn></msup></mrow><annotation encoding="application/x-tex">0*2^3 + 1*2^2 + 0*2^1 + 0*2^0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span></span></span></span></span></span></span></span> = 0 + 4 + 0 + 0 = 4</p>
+</blockquote>
+<ul>
+<li>quanti bit servono per rappresentare la somma di quattro numeri senza segno, ognuno rappresentabile con tre bit?</li>
+</ul>
+<blockquote>
+<p>Siccome il valore massimo rappresentabile con 3 bit senza segno è 7, il massimo valore che la somma di quattro numeri a 3 bit è 28. Per poter rappresentare il numero 28 abbiamo bisogno di 5 bit, poiché con 4 bit il valore massimo rappresentabile sarebbe <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>4</mn></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>15</mn></mrow><annotation encoding="application/x-tex">2^4 -1 = 15</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">15</span></span></span></span>, mentre con 5 abbiamo <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>5</mn></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>31</mn></mrow><annotation encoding="application/x-tex">2^5 -1 = 31</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">31</span></span></span></span>. Questo garantisce di non incappare in overflow.</p>
+</blockquote>
+<h3 id="grafi">Grafi</h3>
+<ul>
+<li>come si rappresenta in Python il grafo K3?</li>
+</ul>
+<pre><code class="language-Python"><span class="hljs-comment"># data la classe Grafo</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Grafo</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, nodi, archi</span>):
+        self.nodi = nodi
+        self.archi = archi
+
+grafo = Grafo({<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>}, {(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>), (<span class="hljs-number">2</span>, <span class="hljs-number">3</span>), (<span class="hljs-number">3</span>, <span class="hljs-number">1</span>)})
+</code></pre>
+<h3 id="espressioni-regolari">Espressioni regolari</h3>
+<ul>
+<li>scrivere l'espressione regolare che collima con le stringhe che contenegono almeno una cifra fra uno e cinque seguita da quel numero di a; Una stringa di questo genere è per esempio arfg3aaabndf, dato che 3 è seguito da tre a; i caratteri possibili sono cifre e lettere minuscole.</li>
+</ul>
+<pre><code class="language-Python">[a-z0-<span class="hljs-number">9</span>]*(1a|2aa|3aaa|4aaaa|5aaaaa)[a-z0-<span class="hljs-number">9</span>]*
+</code></pre>
+<ul>
+<li>data l'espressione regolare ab+, scrivere l'espressione che collima con le stesse stringhe tranne abb</li>
+</ul>
+<pre><code class="language-Python">(ab|ab{<span class="hljs-number">3</span>,})
+<span class="hljs-comment"># oppure</span>
+ab|abbb+
+</code></pre>
+<h3 id="automi">Automi</h3>
+<ul>
+<li>disegnare l'automa che accetta tutte e sole le stringhe di lunghezza due, e tutte quelle che iniziano con a che sono lunghe quattro</li>
+</ul>
+<p><img src="file:///\\wsl.localhost\Ubuntu\home\torbato\Developer\sapienza\inf_teorica\esercizi\media\grafo_4o2a.png" alt="grafo"></p>
+<ul>
+<li>disegnare due automi diversi che accettano esattamente le stesse stringhe (ossia ogni stringa accettata dal primo è accettata dal secondo e viceversa)</li>
+</ul>
+<blockquote>
+<p>Questi due automi, anche se diversi da un punto di vista costruttivo, accettano le stesse stringhe, ovvero le stringhe composte dall'alfabeto {a,b} che contengono almeno una a
+<img src="file:///\\wsl.localhost\Ubuntu\home\torbato\Developer\sapienza\inf_teorica\esercizi\media\automi_diversi_ma_uguali.png" alt="automi_diversi"></p>
+</blockquote>
+<h3 id="grammatiche">Grammatiche</h3>
+<ul>
+<li>dire quali stringhe sono generate dalla seguente grammatica (X è il simbolo iniziale, le maiuscole indicano i simboli non terminali)<br>
+X -&gt; Y<br>
+X -&gt; Z<br>
+Y -&gt; X<br>
+Z -&gt; ab<br>
+Z -&gt; a</li>
+</ul>
+<blockquote>
+<p>La grammatica genera esattamente le due stringhe &quot;a&quot; e &quot;ab&quot;.</p>
+</blockquote>
+<ul>
+<li>dare la definizione di grammatica ambigua; fornire un esempio di grammatica ambigua e una non ambigua</li>
+</ul>
+<blockquote>
+<p>Una grammatica in cui esistono stringhe che hanno più di un albero di derivazione si dice ambigua. Ad esempio, la formula 2+3*4 senza si può ottenere in due modi diversi:
+<img src="file:///\\wsl.localhost\Ubuntu\home\torbato\Developer\sapienza\inf_teorica\esercizi\media\grammatiche_ambigue.png" alt="grammatiche_ambigue"><br>
+Nel primo caso il risultato è <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo stretchy="false">)</mo><mo>∗</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">(2+3)*4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">3</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">4</span></span></span></span>, mentre nel secondo è <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>+</mo><mo stretchy="false">(</mo><mn>3</mn><mo>∗</mo><mn>4</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">2+(3*4)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">4</span><span class="mclose">)</span></span></span></span>, ma chiaramente solo il secondo è corretto (rispetto alla formula originale).</p>
+</blockquote>
+<ul>
+<li>scrivere la grammatica che genera tutte e sole le stringhe nella forma abbbbba, dove il numero di b è arbitrario</li>
+</ul>
+<blockquote>
+<p>X -&gt; a Y a<br>
+Y -&gt; b Y<br>
+Y -&gt; ε (stringa vuota)</p>
+</blockquote>
+<h3 id="complessità-e-calcolabilità">Complessità e calcolabilità</h3>
+<ul>
+<li>fornire la definizione di insieme contabile; dimostrare che l'insieme dei numeri pari è contabile</li>
+</ul>
+<blockquote>
+<p>Un insieme è definito numerabile se i suoi elementi sono in numero finito oppure se possono essere messi in corrispondenza biunivoca con i numeri naturali. Per dimostrare che l'insieme dei numeri pari è contabile è necessario individuare una qualsiasi biezione tra <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span> e <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">N</mi></mrow><annotation encoding="application/x-tex">\mathbb{N}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">N</span></span></span></span>, ad esempio l'applicazione <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi mathvariant="double-struck">N</mi><mo>→</mo><mi>P</mi></mrow><annotation encoding="application/x-tex">f:\mathbb{N} \to P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">N</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span> che a ogni elemento <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">N</mi></mrow><annotation encoding="application/x-tex">n\in \mathbb{N}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">N</span></span></span></span> associa il suo doppio. L'espressione analitica della legge è <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>=</mo><mn>2</mn><mi>n</mi></mrow><annotation encoding="application/x-tex">f(n) = 2n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span><span class="mord mathnormal">n</span></span></span></span>, e si vede che <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> soddisfa la definizione di corrispondenza biunivoca.</p>
+</blockquote>
+<ul>
+<li>disegnare una macchina di Turing, e spiegare in poche righe come funziona</li>
+</ul>
+<blockquote>
+<p>Una macchina di Turing è una macchina che può risolvere problemi di decisione (risposta 0/1) su stringhe. È composta da un nastro di lunghezza illimitata, una testina che si muove sul nastro (di una posizione a destra o a sinistra) e che può leggere e sovrascrivere la cella su cui si trova. È definita formalmente da: un alfabeto per i simboli sul nastro, un insieme di stati possibili (ovvero uno stato iniziale e due finali), una funzione di transizione e un output. La funzione di transizione è espressa attraverso un automa contenuto nell'unità di controllo collegata alla testina.</p>
+</blockquote>
+<p><img src="file:///\\wsl.localhost\Ubuntu\home\torbato\Developer\sapienza\inf_teorica\esercizi\media\Turing_machine.png" alt="macchina_di_turing"></p>
+
+            <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+            
+        </body>
+        </html>
